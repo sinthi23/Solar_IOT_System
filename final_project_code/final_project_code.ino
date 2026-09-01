@@ -9,8 +9,8 @@
 Adafruit_SH1106G display(OLED_WIDTH, OLED_HEIGHT, &Wire, -1);
 
 // ── WiFi & Telegram ──
-const char *ssid = "Sinthi";
-const char *password = "1234sinthi1";
+const char *ssid = "";
+const char *password = "";
 const char *botToken = "";
 const char *chatID = "";
 
