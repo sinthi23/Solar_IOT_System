@@ -46,8 +46,7 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 
 ## 🏗 System Architecture
 
-               
-       <img width="862" height="692" alt="image" src="https://github.com/user-attachments/assets/267db2bb-ab56-4cf7-a010-ac3e494ab3a4" />
+ <img width="862" height="692" alt="image" src="https://github.com/user-attachments/assets/267db2bb-ab56-4cf7-a010-ac3e494ab3a4" />
 
 
 
