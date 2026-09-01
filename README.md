@@ -146,7 +146,7 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
      ```
 
 4. **Calibrate Voltage Readings**
-   - Measure actual voltage with a multimeter and compare with raw ADC readings to compute your own calibration constants (e.g., `SOLAR_BATT_CAL`).
+   - Measure actual voltage with a multimeter and compare with raw ADC readings to compute our own calibration constants (e.g., `SOLAR_BATT_CAL`).
 
 5. **Upload & Run**
    - Select the correct ESP32 board and COM port in Arduino IDE.
