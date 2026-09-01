@@ -139,12 +139,11 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 3. **Configure Credentials**
   
      ```cpp
-     const char* ssid = "YOUR_WIFI_SSID";
-     const char* password = "YOUR_WIFI_PASSWORD";
-     const char* botToken = "YOUR_TELEGRAM_BOT_TOKEN";
-     const char* chatID = "YOUR_TELEGRAM_CHAT_ID";
+     const char* ssid = "WIFI_SSID";
+     const char* password = "WIFI_PASSWORD";
+     const char* botToken = "TELEGRAM_BOT_TOKEN";
+     const char* chatID = "TELEGRAM_CHAT_ID";
      ```
-   - Never commit real credentials to a public repository.
 
 4. **Calibrate Voltage Readings**
    - Measure actual voltage with a multimeter and compare with raw ADC readings to compute your own calibration constants (e.g., `SOLAR_BATT_CAL`).
