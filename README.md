@@ -47,45 +47,11 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 ## 🏗 System Architecture
 
 ```
-                ┌─────────────────────┐
-                │     Solar Panel      │
-                └──────────┬──────────┘
-                           │ (Voltage Sensing)
-                           ▼
-        ┌──────────────────────────────────────┐
-        │               ESP32                    │
-        │  ┌─────────────────────────────────┐  │
-        │  │  Voltage Reading & Calibration   │  │
-        │  │  (Panel / Solar Batt / Main Batt)│  │
-        │  └───────────────┬─────────────────┘  │
-        │                  ▼                      │
-        │  ┌─────────────────────────────────┐  │
-        │  │   Mode Selection Logic            │  │
-        │  │  (SOLAR / SOLAR BATT / MAIN BATT) │  │
-        │  └───────────────┬─────────────────┘  │
-        │                  ▼                      │
-        │  ┌─────────────────────────────────┐  │
-        │  │  Load Protection Logic            │  │
-        │  │  (Fan & LED auto ON/OFF)          │  │
-        │  └───────────────┬─────────────────┘  │
-        │                  ▼                      │
-        │  ┌─────────────────────────────────┐  │
-        │  │  Telegram Manual Override Layer   │  │
-        │  └───────────────┬─────────────────┘  │
-        └──────────────────┼──────────────────────┘
-                           │
-        ┌──────────────────┼───────────────────┐
-        ▼                  ▼                    ▼
-   ┌─────────┐      ┌─────────────┐      ┌─────────────┐
-   │  Relays  │      │ OLED Display │      │ Telegram Bot │
-   │ (Fan/LED/│      │  (Live Status)│      │ (Notify +     │
-   │ Solar/Batt)│    └─────────────┘      │  Commands)    │
-   └─────────┘                            └─────────────┘
+               
+       <img width="862" height="692" alt="image" src="https://github.com/user-attachments/assets/267db2bb-ab56-4cf7-a010-ac3e494ab3a4" />
+
 ```
 
-> 📝 *Note: A hand-drawn circuit diagram is included separately as required by course guidelines. See `/docs` or the attached image for the full wiring schematic.*
-
----
 
 ## 🧰 Hardware Components
 
@@ -176,7 +142,7 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
    - Open the project `.ino` file from [`final_project_code`](./final_project_code).
 
 3. **Configure Credentials**
-   - Replace the placeholders in the code with your own:
+  
      ```cpp
      const char* ssid = "YOUR_WIFI_SSID";
      const char* password = "YOUR_WIFI_PASSWORD";
@@ -198,14 +164,8 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 
 ## 🖼 Project Images
 
-> Add your project photos here (e.g. `docs/setup.jpg`) and embed them like:
-> `![Breadboard setup](docs/setup.jpg)`
+<img width="1367" height="1126" alt="WhatsApp Image 2026-09-01 at 9 20 51 PM" src="https://github.com/user-attachments/assets/a57ade14-f54b-4bd8-9051-6ecc833714d7" />
 
-| Setup | OLED Display | Circuit |
-|---|---|---|
-| Full breadboard build — relay module, buck converter, TP4056 charger, ESP32, solar panel, batteries | *(add close-up photo)* | *(add hand-drawn circuit diagram)* |
-
----
 
 ## 🧪 Testing & Calibration Notes
 
