@@ -191,4 +191,3 @@ GitHub: [@sinthi23](https://github.com/sinthi23)
 
 ---
 
-*This project was developed as part of an academic IoT/embedded systems course project.*
