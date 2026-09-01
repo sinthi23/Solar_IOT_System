@@ -46,11 +46,9 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 
 ## 🏗 System Architecture
 
-```
                
        <img width="862" height="692" alt="image" src="https://github.com/user-attachments/assets/267db2bb-ab56-4cf7-a010-ac3e494ab3a4" />
 
-```
 
 
 ## 🧰 Hardware Components
@@ -65,12 +63,10 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 | Cylindrical Battery (3.7V) | Main/backup battery | 1 |
 | TP4056 USB Charging/Protection Module | Charges and protects the Li-ion battery | 1 |
 | Buck Converter Module | Steps down voltage for regulated supply | 1 |
-| Cooling Fan (12V DC) | Controlled load (ventilation) | 1 |
-| LED Module | Controlled load (lighting/indicator) | 1 |
+| Cooling Fan (5V DC) | Controlled load (ventilation) | 1 |
 | Voltage Sensor / Divider Module | Step down voltages for ESP32 ADC pins | As needed |
 | Breadboard, Jumper Wires | Prototyping and connections | As needed |
 
-*(Add exact model numbers if known — e.g. relay module model, solar panel wattage — for full accuracy.)*
 
 ---
 
