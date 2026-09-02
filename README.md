@@ -212,9 +212,9 @@ During development and testing, the following real issues were identified and re
 ## 👥 Authors
 
 - **Tanha Islam Sinthi** — Roll: 2207023
-- **Sanzida Alam** — Roll: 2207010
+- **Sanzida Alam Jerin** — Roll: 2207010
 
-GitHub: [@sinthi23](https://github.com/sinthi23)
+GitHub: [@sinthi23](https://github.com/sinthi23), [@SANZIDA10](https://github.com/SANZIDA10) 
 
 ---
 
