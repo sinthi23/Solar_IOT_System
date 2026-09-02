@@ -161,7 +161,7 @@ Voltage readings from the **solar panel**, **solar battery**, and **main battery
    - Open the project `.ino` file from [`final_project_code`](./final_project_code).
 
 3. **Configure Credentials**
-   - Replace the placeholders in the code with your own:
+   - Replace the placeholders in the code with our own:
      ```cpp
      const char* ssid = "WIFI_SSID";
      const char* password = "WIFI_PASSWORD";
