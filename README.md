@@ -182,8 +182,9 @@ Voltage readings from the **solar panel**, **solar battery**, and **main battery
 ---
 
 ## 🖼 Project Images
+<div align="center">
 <img width="700" height="600" alt="project-setup" src="https://github.com/user-attachments/assets/a10180ef-c9c1-4c74-99e7-218728d49bb3" />
-
+</div>
 
 ---
 
