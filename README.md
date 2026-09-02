@@ -85,12 +85,11 @@ Voltage readings from the **solar panel**, **solar battery**, and **main battery
 | Cylindrical Battery (3.7V) | Main/backup battery | 1 |
 | TP4056 USB Charging/Protection Module | Charges and protects the Li-ion battery | 1 |
 | Buck Converter Module | Steps down voltage for regulated supply | 1 |
-| Cooling Fan (12V DC) | Controlled load (ventilation) | 1 |
+| Cooling Fan (5V DC) | Controlled load (ventilation) | 1 |
 | LED Module | Controlled load (lighting/indicator) | 1 |
 | Voltage Sensor / Divider Module | Step down voltages for ESP32 ADC pins | As needed |
 | Breadboard, Jumper Wires | Prototyping and connections | As needed |
 
-*(Add exact model numbers if known — e.g. relay module model, solar panel wattage — for full accuracy.)*
 
 ---
 
