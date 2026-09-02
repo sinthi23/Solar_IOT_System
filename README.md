@@ -69,7 +69,7 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 
 Voltage readings from the **solar panel**, **solar battery**, and **main battery** feed into the **ESP32**, which runs the core control logic. The ESP32 drives the **OLED display** for live status, the **4-channel relay module** for switching loads and power paths, and connects over **WiFi/Telegram** for remote commands and alerts. The relay module in turn switches the **Fan + LED** loads and the **solar/battery power path**.
 
-> 📝 A separate hand-drawn electrical circuit diagram (wiring/schematic) is included in [`docs/`](./docs) per course requirements — see [Project Images](#-project-images) below.
+> 
 
 ---
 
