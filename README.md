@@ -8,7 +8,6 @@ Automatic solar/battery switching · Remote Telegram control · Live OLED status
 ![Platform](https://img.shields.io/badge/platform-ESP32-blue)
 ![Language](https://img.shields.io/badge/language-C%2B%2B%20(Arduino)-00599C)
 ![Status](https://img.shields.io/badge/status-working-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 </div>
 
@@ -16,9 +15,7 @@ Automatic solar/battery switching · Remote Telegram control · Live OLED status
 
 ## 🎬 Demo Video
 
-[![Watch the demo](https://img.shields.io/badge/▶-Watch%20the%20demo%20video-red?style=for-the-badge)](PASTE_YOUR_VIDEO_LINK_HERE)
-
-> Replace `PASTE_YOUR_VIDEO_LINK_HERE` with your actual video link (YouTube/Google Drive/etc). If you upload the video file itself to the repo (e.g. in a `docs/` folder), link it the same way instead.
+[![Watch the demo](https://img.shields.io/badge/▶-Watch%20the%20demo%20video-red?style=for-the-badge)](https://drive.google.com/drive/u/5/folders/1yFpwa9LqbSHIEKqMaSj3UTiGpZmaOin4)
 
 ---
 
