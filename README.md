@@ -1,6 +1,24 @@
+<div align="center">
+
 # 🌞 Solar IoT System
 
-An ESP32-based **Solar Power Monitoring & Load Control System** that automatically switches between solar and battery power sources, protects batteries from over-discharge, and allows **remote monitoring and manual control via Telegram**, with live status shown on an OLED display.
+**An ESP32-based Solar Power Monitoring & Load Control System**
+Automatic solar/battery switching · Remote Telegram control · Live OLED status
+
+![Platform](https://img.shields.io/badge/platform-ESP32-blue)
+![Language](https://img.shields.io/badge/language-C%2B%2B%20(Arduino)-00599C)
+![Status](https://img.shields.io/badge/status-working-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+</div>
+
+---
+
+## 🎬 Demo Video
+
+[![Watch the demo](https://img.shields.io/badge/▶-Watch%20the%20demo%20video-red?style=for-the-badge)](PASTE_YOUR_VIDEO_LINK_HERE)
+
+> Replace `PASTE_YOUR_VIDEO_LINK_HERE` with your actual video link (YouTube/Google Drive/etc). If you upload the video file itself to the repo (e.g. in a `docs/` folder), link it the same way instead.
 
 ---
 
@@ -18,7 +36,7 @@ An ESP32-based **Solar Power Monitoring & Load Control System** that automatical
 - [Project Images](#-project-images)
 - [Testing & Calibration Notes](#-testing--calibration-notes)
 - [Future Improvements](#-future-improvements)
-- [Author](#-author)
+- [Authors](#-authors)
 
 ---
 
@@ -32,23 +50,31 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 
 ## ✨ Features
 
-- 🔋 **Automatic power source switching** — Solar → Solar Battery → Main Battery, based on real-time voltage readings
-- 🌀 **Automatic Fan control** — turns on/off based on battery voltage thresholds to protect the battery and manage cooling
-- 💡 **Automatic LED control** — stays on under normal conditions, shuts off during critical battery levels
-- 📲 **Remote control via Telegram Bot** — manually override Fan and LED independently using simple commands
-- 🔄 **Auto/Manual mode switching** — instantly revert to full automatic control with a single command
-- 📟 **Real-time OLED display** — shows live voltages, current power mode, and Fan/LED status (auto `[A]` or manual `[M]`)
-- 🛡️ **Battery protection logic** — prevents deep discharge by cutting non-essential loads at critical voltage levels
-- 📡 **WiFi connectivity** — enables remote notifications and command handling
-- 📉 **Smoothed ADC readings** — exponential smoothing filter reduces voltage reading noise/fluctuation
+| | |
+|---|---|
+| 🔋 **Automatic power switching** | Solar → Solar Battery → Main Battery, based on real-time voltage |
+| 🌀 **Automatic Fan control** | Turns on/off based on battery voltage thresholds |
+| 💡 **Automatic LED control** | Stays on normally, shuts off at critical battery levels |
+| 📲 **Remote Telegram control** | Override Fan and LED independently, from anywhere |
+| 🔄 **Auto/Manual toggle** | Instantly revert to full automatic control |
+| 📟 **Live OLED display** | Voltages, power mode, and Fan/LED status (`[A]`/`[M]`) |
+| 🛡️ **Battery protection** | Cuts non-essential loads at critical voltage |
+| 📡 **WiFi connectivity** | Remote notifications and command handling |
+| 📉 **Smoothed ADC readings** | Exponential smoothing filters out sensor noise |
 
 ---
 
 ## 🏗 System Architecture
 
- <img width="862" height="692" alt="image" src="https://github.com/user-attachments/assets/267db2bb-ab56-4cf7-a010-ac3e494ab3a4" />
+<div align="center">
+<img src="docs/system-architecture.png" alt="Solar IoT System architecture diagram" width="700">
+</div>
 
+Voltage readings from the **solar panel**, **solar battery**, and **main battery** feed into the **ESP32**, which runs the core control logic. The ESP32 drives the **OLED display** for live status, the **4-channel relay module** for switching loads and power paths, and connects over **WiFi/Telegram** for remote commands and alerts. The relay module in turn switches the **Fan + LED** loads and the **solar/battery power path**.
 
+> 📝 A separate hand-drawn electrical circuit diagram (wiring/schematic) is included in [`docs/`](./docs) per course requirements — see [Project Images](#-project-images) below.
+
+---
 
 ## 🧰 Hardware Components
 
@@ -62,10 +88,12 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 | Cylindrical Battery (3.7V) | Main/backup battery | 1 |
 | TP4056 USB Charging/Protection Module | Charges and protects the Li-ion battery | 1 |
 | Buck Converter Module | Steps down voltage for regulated supply | 1 |
-| Cooling Fan (5V DC) | Controlled load (ventilation) | 1 |
+| Cooling Fan (12V DC) | Controlled load (ventilation) | 1 |
+| LED Module | Controlled load (lighting/indicator) | 1 |
 | Voltage Sensor / Divider Module | Step down voltages for ESP32 ADC pins | As needed |
 | Breadboard, Jumper Wires | Prototyping and connections | As needed |
 
+*(Add exact model numbers if known — e.g. relay module model, solar panel wattage — for full accuracy.)*
 
 ---
 
@@ -137,16 +165,17 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
    - Open the project `.ino` file from [`final_project_code`](./final_project_code).
 
 3. **Configure Credentials**
-  
+   - Replace the placeholders in the code with your own:
      ```cpp
-     const char* ssid = "WIFI_SSID";
-     const char* password = "WIFI_PASSWORD";
-     const char* botToken = "TELEGRAM_BOT_TOKEN";
-     const char* chatID = "TELEGRAM_CHAT_ID";
+     const char* ssid = "YOUR_WIFI_SSID";
+     const char* password = "YOUR_WIFI_PASSWORD";
+     const char* botToken = "YOUR_TELEGRAM_BOT_TOKEN";
+     const char* chatID = "YOUR_TELEGRAM_CHAT_ID";
      ```
+   - Never commit real credentials to a public repository.
 
 4. **Calibrate Voltage Readings**
-   - Measure actual voltage with a multimeter and compare with raw ADC readings to compute our own calibration constants (e.g., `SOLAR_BATT_CAL`).
+   - Measure actual voltage with a multimeter and compare with raw ADC readings to compute your own calibration constants (e.g., `SOLAR_BATT_CAL`).
 
 5. **Upload & Run**
    - Select the correct ESP32 board and COM port in Arduino IDE.
@@ -158,8 +187,16 @@ Based on battery health, it automatically controls a **fan** (for cooling/ventil
 
 ## 🖼 Project Images
 
-<img width="1367" height="1126" alt="WhatsApp Image 2026-09-01 at 9 20 51 PM" src="https://github.com/user-attachments/assets/a57ade14-f54b-4bd8-9051-6ecc833714d7" />
+<div align="center">
+<img src="docs/project-setup.jpg" alt="Full breadboard build of the Solar IoT System" width="600">
+<p><em>Full breadboard build — 4-channel relay module, buck converter, TP4056 charger, ESP32, OLED, solar panel, and batteries</em></p>
+</div>
 
+| OLED Display | Hand-Drawn Circuit |
+|---|---|
+| *(add close-up photo of OLED showing live status)* | *(add photo of your hand-drawn circuit/wiring diagram)* |
+
+---
 
 ## 🧪 Testing & Calibration Notes
 
@@ -187,7 +224,12 @@ During development and testing, the following real issues were identified and re
 - **Tanha Islam Sinthi** — Roll: 2207023
 - **Sanzida Alam** — Roll: 2207010
 
-GitHub: [@sinthi23](https://github.com/sinthi23), [@SANZIDA10](https://github.com/SANZIDA10)
+GitHub: [@sinthi23](https://github.com/sinthi23)
 
 ---
 
+<div align="center">
+
+*Developed as part of an academic IoT/embedded systems course project.*
+
+</div>
